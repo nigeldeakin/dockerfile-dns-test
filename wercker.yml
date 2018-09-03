@@ -7,6 +7,10 @@ build:
       code: | 
         cat /etc/resolv.conf 
         ping -c 1 google.com
+        echo Test A
+        docker  run alpine sh -c "ping -c 1 google.com"
+        echo test B
+        docker  run --network $DOCKER_NETWORK alpine sh -c "ping -c 1 google.com"
     - internal/docker-build:
       dockerfile: Dockerfile
       image-name: test-docker
