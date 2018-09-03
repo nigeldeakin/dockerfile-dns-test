@@ -6,6 +6,7 @@ build:
       name: testing
       code: | 
         cat /etc/resolv.conf 
+        nmcli dev show | grep DNS
     - internal/docker-build:
       dockerfile: Dockerfile
       image-name: test-docker
