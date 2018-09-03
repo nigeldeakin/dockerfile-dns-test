@@ -1,4 +1,4 @@
 FROM alpine
 USER root
 RUN cat /etc/resolv.conf
-RUN ping google.com
+RUN ping -c 1 google.com
