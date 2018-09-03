@@ -7,7 +7,7 @@ build:
       code: | 
         cat /etc/resolv.conf 
         apt-get update
-        apt-get install iputils-ping
+        apt-get -y install iputils-ping
         ping google.com
     - internal/docker-build:
       dockerfile: Dockerfile
