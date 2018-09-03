@@ -1,4 +1,4 @@
-box: ubuntu
+box: alpine
 build:
   docker: true
   steps:
@@ -6,8 +6,6 @@ build:
       name: testing
       code: | 
         cat /etc/resolv.conf 
-        apt-get update
-        apt-get -y install iputils-ping
         ping google.com
     - internal/docker-build:
       dockerfile: Dockerfile
