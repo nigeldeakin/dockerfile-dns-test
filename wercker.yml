@@ -3,6 +3,12 @@ build:
   docker: true
   steps:
     - script:
+      name: Install docker
+      code: |
+        apk add docker
+        docker version
+        docker ps     
+    - script:
       name: testing
       code: | 
         cat /etc/resolv.conf 
