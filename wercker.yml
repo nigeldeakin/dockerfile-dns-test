@@ -1,5 +1,6 @@
 box: ubuntu
 build:
+  docker: true
   steps:
     - script:
       name: testing
